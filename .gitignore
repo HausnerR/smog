@@ -13,3 +13,7 @@ pom.xml.asc
 /.repl
 *.log
 /.env
+/.idea
+Procfile
+*.iml
+system.properties

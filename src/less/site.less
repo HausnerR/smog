@@ -1,0 +1,123 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.top-nav {
+    box-shadow: none;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.loading {
+    margin: 60px 0;
+    text-align: center;
+}
+
+.buttons-bar {
+    margin: 20px 0;
+
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+.last-update {
+    display: inline-block;
+    line-height: 36px;
+}
+
+.add-station-component {
+    position: relative;
+    float: right;
+    display: inline-block;
+
+    .overlay {
+        position: fixed;
+        z-index: 100;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #fff;
+        opacity: .000001;
+    }
+
+    .collection {
+        position: absolute;
+        z-index: 101;
+        top: 36px;
+        right: 0;
+
+        .overflow {
+            width: 400px;
+            max-height: 300px;
+            overflow: scroll;
+
+            @media (max-width: 450px) {
+                width: 280px;
+            }
+        }
+
+        .collection-header .input-field,
+        .collection-header .input-field input {
+            margin: 0;
+        }
+    }
+}
+
+.welcome-info-box {
+    margin: 40px 0;
+
+    .card-content p {
+        margin: 10px 0;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.station-row {
+    position: relative;
+
+    h5 {
+        margin: 5px 0;
+        line-height: 26px;
+    }
+
+    .remove-button {
+        float: right;
+        margin-left: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .badge {
+        margin: 7px 0;
+    }
+
+    .warning-icon {
+        position: absolute;
+        top: 23px;
+        right: 24px;
+        margin: 4px 0;
+    }
+
+    .value {
+        font-weight: 500;
+    }
+
+    .unit {
+        font-style: italic;
+    }
+
+    .no-data {
+        opacity: .5;
+    }
+}
